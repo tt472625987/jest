@@ -2,7 +2,10 @@ module.export = {
   roots: ["<rootDir>/src"], // 目录文件
   collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}", "!src/**/*.d.ts"], // 覆盖率是从哪些文件生产的 （不分析类型申明文件）
   setupFiles: ["react-app-polyfill/jsdom"], // 运行之前额外准备什么 （react-app-polyfill/jsdom dom兼容性上的问题）
-  setupFilesAfterEnv: ["<rootDir>/src/setupTests.js"], // 环境搭建好后去执行的文件
+  setupFilesAfterEnv: [
+    "./node_modules/jest-enzyme/lib/index.js", // jest-enzyme
+    "<rootDir>/src/setupTests.js",
+  ], // 环境搭建好后去执行的文件
   testMatch: [
     "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
     "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}",
