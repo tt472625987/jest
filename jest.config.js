@@ -1,4 +1,4 @@
-module.export = {
+module.exports = {
   roots: ["<rootDir>/src"], // 目录文件
   collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}", "!src/**/*.d.ts"], // 覆盖率是从哪些文件生产的 （不分析类型申明文件）
   setupFiles: ["react-app-polyfill/jsdom"], // 运行之前额外准备什么 （react-app-polyfill/jsdom dom兼容性上的问题）

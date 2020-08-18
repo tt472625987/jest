@@ -27,8 +27,11 @@ it("render without crashing", () => {
 
   // jest-enzyme
   expect(wrapper.find("[data-test='container']")).toExist();
-  // expect(wrapper.find("[data-test='container']")).toHaveProp(
-  //   "title",
-  //   "react-app"
-  // );
+  expect(wrapper.find("[data-test='container']")).toHaveProp(
+    "title",
+    "react-app"
+  );
+
+  // 快照
+  // expect(wrapper).toMatchSnapshot();
 });
