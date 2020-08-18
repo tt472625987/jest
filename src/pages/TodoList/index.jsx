@@ -2,9 +2,11 @@ import React from "react";
 
 import Header from "./components/Header";
 const TodoList = () => {
+  const addItem = React.useCallback(() => {}, []);
+
   return (
     <div>
-      <Header />
+      <Header addItem={addItem} />
     </div>
   );
 };
